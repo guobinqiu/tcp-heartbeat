@@ -12,8 +12,8 @@
 
 ```
 go run server.go
-go run client.go -n a
-go run client.go -n b
+go run client.go -n 客户端名A
+go run client.go -n 客户端名B
 ```
 
 ![hi,amigo!](screeshot.jpg)
