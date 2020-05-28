@@ -12,12 +12,12 @@
 
 ```
 go run server.go
-go run client.go -n 客户端名A
-go run client.go -n 客户端名B
+go run client.go -n 客户端名字A
+go run client.go -n 客户端名字B
 ```
 
 ![hi,amigo!](screeshot.jpg)
 
 ### Related Topic
 
-[TCP聊天](https://github.com/guobinqiu/tcpcomm)
+[TCP对话](https://github.com/guobinqiu/tcp-talk)
