@@ -8,3 +8,16 @@
 
 服务端还需开启另外一个线程，该线程会去定时（比如每隔1分钟）扫描这个全局map，把扫描到的超时（当前时间 - 最后更新时间 > 设定阈值）的socket关闭。
 
+### Run
+
+```
+go run server.go
+go run client.go -n a
+go run client.go -n b
+```
+
+![hello,amigo!](screenshot.png)
+
+相关主题
+
+> https://github.com/guobinqiu/tcpcomm
