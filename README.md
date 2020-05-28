@@ -18,6 +18,7 @@ go run client.go -n b
 
 ![hello,amigo!](screenshot.png)
 
-相关主题
+### Related Topic
 
-> https://github.com/guobinqiu/tcpcomm
+[TCP聊天程序](https://github.com/guobinqiu/tcpcomm)
+
