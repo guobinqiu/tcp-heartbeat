@@ -51,8 +51,6 @@ func main() {
 
 func sendHeartbeat(conn net.Conn) {
 	for {
-		log.Println("heartbeat was sent")
-
 		//send message to server
 		msg := message.Message{
 			MessageType: message.Heartbeat,
@@ -61,7 +59,9 @@ func sendHeartbeat(conn net.Conn) {
 		}
 		b, _ := json.Marshal(msg)
 		conn.Write(b)
-
+		
+		log.Println("heartbeat was sent")
+		
 		time.Sleep(time.Duration(sendInterval) * time.Second)
 	}
 }
