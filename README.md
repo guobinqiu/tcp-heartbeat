@@ -16,7 +16,7 @@ go run server.go
 go run client.go -n 客户端名字A
 go run client.go -n 客户端名字B
 ```
-![hi,amigo!](screeshot.jpg)
+![hi,amigo!](screenshot.jpg)
 
 ### Related Topic
-[TCP对话](https://github.com/guobinqiu/tcp-talk)
+- [TCP对话](https://github.com/guobinqiu/tcp-talk)
