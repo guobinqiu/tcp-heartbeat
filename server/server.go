@@ -40,7 +40,7 @@ func main() {
 	}
 	fmt.Printf("server listening on port: %d\n", port)
 
-	//没有len方法 https://github.com/golang/go/issues/20680
+	//sync.Map没有len方法 https://github.com/golang/go/issues/20680
 	conns := new(sync.Map)
 
 	go scan(conns)
@@ -87,9 +87,9 @@ func scan(conns *sync.Map) {
 		conns.Range(func(k, v interface{}) bool {
 			client := v.(client)
 			if time.Now().Sub(client.lastUpdatedAt).Seconds() > float64(ttl) {
-				log.Printf("client (%s) was kicked off\n", client.name)
 				k.(net.Conn).Close()
 				conns.Delete(k)
+				log.Printf("client (%s) was kicked off\n", client.name)
 			}
 			return true
 		})
